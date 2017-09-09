@@ -3,4 +3,4 @@
 
 #include "Adafruit_GFX.h"
 
-#endif __ADAFRUIT_GFX_RK_H
+#endif // __ADAFRUIT_GFX_RK_H
