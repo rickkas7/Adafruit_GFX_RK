@@ -23,6 +23,10 @@ Recent Arduino IDE releases include the Library Manager for easy installation. O
 
 # Version History
 
+### 1.5.8 (2020-08-02)
+
+- Fix compiler error for `error: deleted function 'virtual Adafruit_SPITFT::~Adafruit_SPITFT()' overriding non-deleted function` with 2.0.0-rc.1.
+
 ### 1.5.7 (2020-05-04)
 
 - Fix compiler error for undefined conversion to SpiClass with 1.5.1-rc.1.

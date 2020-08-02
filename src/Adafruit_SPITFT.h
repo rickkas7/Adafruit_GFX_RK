@@ -173,6 +173,8 @@ class Adafruit_SPITFT : public Adafruit_GFX {
       int8_t d0, int8_t wr, int8_t dc,
       int8_t cs = -1, int8_t rst = -1, int8_t rd = -1);
 
+    virtual ~Adafruit_SPITFT() {}; 
+
     // CLASS MEMBER FUNCTIONS ----------------------------------------------
 
     // These first two functions MUST be declared by subclasses:
