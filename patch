@@ -1,0 +1,23 @@
+--- ../../Adafruit/Adafruit-GFX-Library/Adafruit_GFX.h	2023-09-19 06:50:47
++++ src/Adafruit_GFX.h	2023-09-19 06:37:31
+@@ -1,7 +1,10 @@
+ #ifndef _ADAFRUIT_GFX_H
+ #define _ADAFRUIT_GFX_H
+ 
+-#if ARDUINO >= 100
++#if defined(PARTICLE)
++ #include "Particle.h"
++ #define ARDUINO 157
++#elif ARDUINO >= 100
+  #include "Arduino.h"
+  #include "Print.h"
+ #else
+@@ -16,6 +19,8 @@
+ 
+   Adafruit_GFX(int16_t w, int16_t h); // Constructor
+ 
++  virtual ~Adafruit_GFX() {};
++
+   // This MUST be defined by the subclass:
+   virtual void drawPixel(int16_t x, int16_t y, uint16_t color) = 0;    ///< Virtual drawPixel() function to draw to the screen/framebuffer/etc, must be overridden in subclass. @param x X coordinate.  @param y Y coordinate. @param color 16-bit pixel color. 
+ 
